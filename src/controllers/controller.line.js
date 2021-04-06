@@ -1,5 +1,5 @@
 import DatasetController from '../core/core.datasetController';
-import {isNumber, _limitValue} from '../helpers/helpers.math';
+import {_limitValue, isNumber} from '../helpers/helpers.math';
 import {_lookupByKey} from '../helpers/helpers.collection';
 
 export default class LineController extends DatasetController {
@@ -130,7 +130,7 @@ LineController.overrides = {
   }
 };
 
-function getStartAndCountOfVisiblePoints(meta, points, animationsDisabled) {
+export function getStartAndCountOfVisiblePoints(meta, points, animationsDisabled) {
   const pointCount = points.length;
 
   let start = 0;
